@@ -1,0 +1,26 @@
+[Unit]
+Description=gfr's distributed currency daemon
+After=network.target
+
+[Service]
+User=gfr
+Group=gfr
+
+Type=forking
+PIDFile=/var/lib/gfrd/gfrd.pid
+
+ExecStart=/usr/bin/gfrd -daemon -pid=/var/lib/gfrd/gfrd.pid \
+          -conf=/etc/gfr/gfr.conf -datadir=/var/lib/gfrd
+
+ExecStop=-/usr/bin/gfr-cli -conf=/etc/gfr/gfr.conf \
+         -datadir=/var/lib/gfrd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Gfr
+Comment=Gfr P2P Cryptocurrency
+Comment[fr]=Gfr, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Gfr, eşten eşe kriptografik sanal para birimi
+Exec=gfr-qt %u
+Terminal=false
+Type=Application
+Icon=gfr128
+MimeType=x-scheme-handler/gfr;
+Categories=Office;Finance;
