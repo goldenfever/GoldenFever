@@ -551,7 +551,7 @@ void BitcoinMiner(CWallet* pwallet, bool fProofOfStake)
 			//DEBUG!!!
             //while (chainActive.Tip()->nTime < 1471482000 || vNodes.empty() || pwallet->IsLocked() || !fMintableCoins || nReserveBalance >= pwallet->GetBalance() ) {
                 nLastCoinStakeSearchInterval = 0;
-                //LogPrintf("Miner: ProofOfStake is true, but wallet is not synces, locked, etc...\n");
+                //LogPrintf("Miner: ProofOfStake is true, but wallet is not synced, locked, etc...\n");
                 MilliSleep(5000);
                 if (!fGenerateBitcoins && !fProofOfStake)
                     continue;
